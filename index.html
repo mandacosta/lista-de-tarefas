@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Lista de tarefas</title>
+</head>
+<body>
+    <header>
+        <h1>My Tasks</h1>
+        <input type="text" placeholder="Pesquisar tarefa" id="pesquisa-texto">
+        <button id="pesquisa">Pesquisa</button>
+    </header>
+
+    <section>
+        <h2>Inserir tarefa</h2>
+        <input type="text" placeholder="Digitar título da tarefa" id="input">
+        <select name="urgencia" id="urgencia" required="true">
+            <option value="">Selecionar tipo</option>
+            <option value="urgente">Urgente</option>
+            <option value="prioritario">Prioritário</option>
+            <option value="normal">Normal</option>
+        </select>
+        <button id="addBtn">Inserir</button>
+    </section>
+   
+    <section>
+        <h2>Tarefas</h2>
+        <ul id="lista">
+            <!-- <li class="tipo">
+                <p>Descrição</p>
+                <button>Remover</button>
+            </li> -->
+        </ul>
+    </section>
+    
+
+
+  
+
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+li {
+    list-style: none;
+}
+
+.normal::before {content: "•"; color: rgb(73, 239, 139)}
+
+.prioritario::before {content: "•"; color: rgb(255, 251, 0)}
+
+.urgente::before {content: "•"; color: rgb(241, 72, 72)}
