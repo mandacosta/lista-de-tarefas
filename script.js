@@ -1,8 +1,3 @@
-//descrição básica - botão adicionar tarefa
-//Recolher as informação (value) dos elementos HTML e montar um array de objetos com elas (let listaTarefas)
-//Com essa lista de tarefas, montar um template HTML das atividades
-//Renderizar na tela os templates montados
-
 //Interceptando os elementos
 let addBtn = document.getElementById("addBtn")
 let select = document.getElementById("urgencia")
@@ -10,20 +5,7 @@ let inputText = document.getElementById("input")
 let tagLista = document.getElementById("lista")
 
 //Array de tarefas que será alimentado
-let listaTarefas = [
-  // {
-  //   nome: "Regar as plantas",
-  //   urgencia: "normal"
-  // },
-  // {
-  //   nome: "Recolher o lixo",
-  //   urgencia: "prioritario"
-  // },
-  // {
-  //   nome: "Terminar os exercícios",
-  //   urgencia: "urgente"
-  // },
-]
+let listaTarefas = []
 
 //Adicionar o escutador no botão adicionar
 addBtn.addEventListener("click",adicionarTarefa)
@@ -87,7 +69,7 @@ function montarTemplate(tarefa, index){
   li.id = index
   li.innerHTML = `
   <p>${tarefa.nome}</p>
-  <button id="${index}">X</button>`
+  <button id="${index}" class="btnRemove">x</button>`
 
   return li
 }
@@ -99,11 +81,6 @@ function removerTarefa (event){
   let btn = event.target
   
   if(btn.tagName == "BUTTON"){
-    // let li = btn.parentNode
-    // tagLista.removeChild(li)
-    // listaTarefas.splice(btn.id,1)   
-    // console.log(listaTarefas)
-
     listaTarefas.splice(btn.id,1)
     renderizar(ordenar(listaTarefas), tagLista)
     console.log(listaTarefas)

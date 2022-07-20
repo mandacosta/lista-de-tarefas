@@ -8,14 +8,18 @@
     <title>Lista de tarefas</title>
 </head>
 <body>
-    <header>
-        <h1>My Tasks</h1>
-        <input type="text" placeholder="Pesquisar tarefa" id="pesquisa-texto">
+    <div class="container">
+      <header>
+        <h1>To do List</h1>
+        <div class="pesquisa">
+            <input type="text" placeholder="Pesquisar tarefa" id="pesquisa-texto">
         <button id="pesquisa">Pesquisa</button>
+        </div>
     </header>
 
     <section>
         <h2>Inserir tarefa</h2>
+        <form action="">
         <input type="text" placeholder="Digitar título da tarefa" id="input">
         <select name="urgencia" id="urgencia" required="true">
             <option value="">Selecionar tipo</option>
@@ -24,17 +28,16 @@
             <option value="normal">Normal</option>
         </select>
         <button id="addBtn">Inserir</button>
+        </form>
     </section>
    
     <section>
         <h2>Tarefas</h2>
         <ul id="lista">
-            <!-- <li class="tipo">
-                <p>Descrição</p>
-                <button>Remover</button>
-            </li> -->
         </ul>
-    </section>
+    </section>  
+    </div>
+    
     
 
 
